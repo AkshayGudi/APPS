@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.akshaygudi.myapp.WebViewConnect">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/urlLayout">
+
+        <TableRow>
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Enter the URL"
+                android:layout_weight="1"
+                android:layout_column="0"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow>
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_column="0"
+                android:id="@+id/urlField"/>
+
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/browser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Browser"
+                android:layout_weight="1"
+                android:layout_column="0"
+                android:onClick="openInBrowser"/>
+
+            <Button
+                android:id="@+id/inApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open in App"
+                android:layout_weight="1"
+                android:layout_column="0"
+                android:onClick="openInApp"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/urlLayout"
+        android:id="@+id/webSpace">
+
+    </WebView>
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Close Activity"
+          android:layout_below="@+id/webSpace"
+          android:id="@+id/button2"
+          android:onClick="testAlert"/>
+
+</RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

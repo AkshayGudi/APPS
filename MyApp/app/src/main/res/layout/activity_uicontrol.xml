@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.akshaygudi.myapp.UIControlActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/firstTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="hai"
+        android:text="Not Editable"
+        android:gravity="center"
+        android:fontFamily="serif"
+        android:textSize="20dp"
+        android:editable="true"
+        android:cursorVisible="true"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstTextView"
+        android:contentDescription="Temp Description"
+        android:hint="hint Value"/>
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/auTextView"
+        android:layout_below="@+id/editText"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/auTextView"
+        android:id="@+id/linearLayout">
+
+    <Button
+        android:id="@+id/buttonTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test Button"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:layout_weight="1"/>
+    <!--android:onClick="buttonClick"-->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image4"
+            android:layout_weight="1"
+            android:tooltipText="This is image"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearLayout">
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oreo" />
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Froyo" />
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nougat" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download"
+            android:id="@+id/checkboxButton"/>
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:textOn="1"
+        android:textOff="0"
+        android:disabledAlpha="0.5"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGrp"
+        android:layout_alignRight="@id/toggleButton"
+        android:layout_below="@id/linearLayout2"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="One"
+            android:layout_gravity="left"
+            android:onClick="onClickRadio"
+            android:tag="One"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Two"
+            android:layout_gravity="left"
+            android:tag="Two"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Three"
+            android:layout_gravity="left"
+            android:hint="Third"
+            android:tag="Three"/>
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinnerType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toggleButton"
+        android:layout_alignParentRight="true"
+        android:prompt="@string/spinner"
+        android:entries="@array/spinArray">
+    </Spinner>
+
+    <!--<TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TimePicker>-->
+    <!--<DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></DatePicker>-->
+
+</RelativeLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

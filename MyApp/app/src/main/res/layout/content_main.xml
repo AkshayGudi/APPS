@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.akshaygudi.myapp.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_centerInParent="true">
+        
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="goToBrowser"
+            android:text="Browse"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            />
+            <!-- android:gravity="right"  Text Align inside widget -->
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="stopService"
+            android:text="New Activity"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/linearLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Label for Linear Layout"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/buttonLayout"
+        />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabLayout">
+
+        <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:text="Cell1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_column="0"/>
+
+        <EditText
+            android:text="Cell2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:text="Celebrity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_column="0"
+                android:gravity="center"
+                android:layout_span="3"
+                />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabLayout">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Absolute"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:gravity="center"/>
+
+    </AbsoluteLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image1"
+            android:scaleType="fitCenter"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is foreground"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+            android:foregroundGravity="right"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:textSize="20dp"
+            />
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLabel"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="Open UI Controls"
+        android:onClick="openUIControlActivity"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
+

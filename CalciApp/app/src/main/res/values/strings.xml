@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CalciApp</string>
+    <string name="operator">operator</string>
+    <string name="number">number</string>
+</resources>
